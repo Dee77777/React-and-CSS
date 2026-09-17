@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import { Button } from '@ Y A ds.e/react'
+import { Button } from '@ds.e/react'
 
 import '@ds.e/scss/lib/Button.css'
 

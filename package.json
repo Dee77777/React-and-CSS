@@ -9,7 +9,8 @@
   "workspaces": {
     "packages": [
       "react",
-      "playgrounds/*"
+      "playgrounds/*",
+      "scss"
     ]
   },
   "keywords": [],
@@ -18,6 +19,7 @@
   "devDependencies": {
     "@types/react": "^18.2.0",
     "lerna": "^7.2.0",
+    "normalize-scss": "^7.0.1",
     "typescript": "^5.0.4"
   },
   "private": true
