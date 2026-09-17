@@ -1,0 +1,29 @@
+{
+  "name": "@ds.e/scss",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "husky": "8.0.3",
+    "lint-staged": "14.0.1",
+    "node-sass": "6.0.1",
+    "normalize-scss": "7.0.1",
+    "prettier": "2.8.8",
+    "stylelint": "14.16.1",
+    "stylelint-config-prettier": "9.0.5",
+    "stylelint-config-sass-guidelines": "9.0.1",
+    "stylelint-prettier": "2.0.0"
+  },
+  "scripts": {
+    "lint": "stylelint './**/*.scss'",
+    "lint:fix": "npm run lint -- --fix",
+    "prepare": "husky install",
+    "build": "node src/scripts/build.js"
+  },
+  "lint-staged": {
+    "*.scss": "npm run lint:fix"
+  }
+}
