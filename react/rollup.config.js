@@ -3,7 +3,11 @@ import { nodeResolve } from '@rollup/plugin-node-resolve'
 
 export default {
     input: [
-        'src/index.ts'
+        'src/index.ts',
+        'src/atoms/Color/index.ts',
+        'src/atoms/Margin/index.ts',
+        'src/atoms/Button/index.ts',
+        'src/atoms/Text/index.ts'
     ],
     output: {
         dir: 'lib',
@@ -22,6 +26,7 @@ export default {
     external: [
     'react', 
     'react-dom', 
-    'react/jsx-runtime' // Add this line
+    'react/jsx-runtime', // Add this line
+    '@ds.e/foundation'
   ]
 }

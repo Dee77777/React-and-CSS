@@ -20,8 +20,9 @@
   "scripts": {
     "lint": "stylelint './**/*.scss'",
     "lint:fix": "npm run lint -- --fix",
-    "prepare": "husky install",
-    "build": "node src/scripts/build.js"
+    "prepare": "husky || true",
+    "build": "node src/scripts/build.js",
+    "dev": "npx nodemon --watch src --exec npm run build -e scss"
   },
   "lint-staged": {
     "*.scss": "npm run lint:fix"

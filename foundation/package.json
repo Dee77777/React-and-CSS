@@ -1,0 +1,17 @@
+{
+  "name": "@ds.e/foundation",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "",
+  "main": "lib/index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^5.0.4"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "npm run build --watch"
+  }
+}

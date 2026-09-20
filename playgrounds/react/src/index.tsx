@@ -1,11 +1,17 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import { Button } from '@ds.e/react'
+import { Text, Margin } from '@ds.e/react'
 
-import '@ds.e/scss/lib/Button.css'
+import '@ds.e/scss/lib/Utilities.css'
+import '@ds.e/scss/lib/Margin.css'
+import '@ds.e/scss/lib/Text.css'
 
 ReactDOM.render(
-    <Button label='Example Button'/>,
+    <div>
+        <Margin>
+            <Text label='this is some text'/>
+        </Margin>
+    </div>,
     document.querySelector('#root')
 )

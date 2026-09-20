@@ -586,23 +586,39 @@ var _reactDefault = parcelHelpers.interopDefault(_react);
 var _reactDom = require("react-dom");
 var _reactDomDefault = parcelHelpers.interopDefault(_reactDom);
 var _react1 = require("@ds.e/react");
-var _buttonCss = require("@ds.e/scss/lib/Button.css");
-(0, _reactDomDefault.default).render(/*#__PURE__*/ (0, _reactDefault.default).createElement((0, _react1.Button), {
-    label: "Example Button",
+var _utilitiesCss = require("@ds.e/scss/lib/Utilities.css");
+var _marginCss = require("@ds.e/scss/lib/Margin.css");
+var _textCss = require("@ds.e/scss/lib/Text.css");
+(0, _reactDomDefault.default).render(/*#__PURE__*/ (0, _reactDefault.default).createElement("div", {
     __source: {
         fileName: "playgrounds/react/src/index.tsx",
-        lineNumber: 9,
+        lineNumber: 11,
         columnNumber: 5
     },
     __self: undefined
-}), document.querySelector("#root"));
+}, /*#__PURE__*/ (0, _reactDefault.default).createElement((0, _react1.Margin), {
+    __source: {
+        fileName: "playgrounds/react/src/index.tsx",
+        lineNumber: 12,
+        columnNumber: 9
+    },
+    __self: undefined
+}, /*#__PURE__*/ (0, _reactDefault.default).createElement((0, _react1.Text), {
+    label: "this is some text",
+    __source: {
+        fileName: "playgrounds/react/src/index.tsx",
+        lineNumber: 13,
+        columnNumber: 13
+    },
+    __self: undefined
+}))), document.querySelector("#root"));
 
   $parcel$ReactRefreshHelpers$8952.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react":"21dqq","react-dom":"j6uA9","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","@ds.e/scss/lib/Button.css":"8QHo2","@ds.e/react":"8EIfV"}],"21dqq":[function(require,module,exports) {
+},{"react":"21dqq","react-dom":"j6uA9","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","@ds.e/scss/lib/Utilities.css":"hYo6M","@ds.e/scss/lib/Margin.css":"2YJyJ","@ds.e/scss/lib/Text.css":"aQrAH","@ds.e/react":"8EIfV"}],"21dqq":[function(require,module,exports) {
 "use strict";
 module.exports = require("a569817e6ea559f6");
 
@@ -24564,37 +24580,47 @@ module.exports = require("96622d495519d4e");
     exports.setSignature = setSignature;
 })();
 
-},{}],"8QHo2":[function() {},{}],"8EIfV":[function(require,module,exports) {
+},{}],"hYo6M":[function() {},{}],"2YJyJ":[function() {},{}],"aQrAH":[function() {},{}],"8EIfV":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "Button", ()=>(0, _buttonJsDefault.default));
-var _buttonJs = require("./atoms/Button/Button.js");
-var _buttonJsDefault = parcelHelpers.interopDefault(_buttonJs);
+parcelHelpers.export(exports, "Color", ()=>(0, _colorJsDefault.default));
+parcelHelpers.export(exports, "Text", ()=>(0, _textJsDefault.default));
+parcelHelpers.export(exports, "Margin", ()=>(0, _marginJsDefault.default));
+var _colorJs = require("./atoms/Color/Color.js");
+var _colorJsDefault = parcelHelpers.interopDefault(_colorJs);
+var _textJs = require("./atoms/Text/Text.js");
+var _textJsDefault = parcelHelpers.interopDefault(_textJs);
+var _marginJs = require("./atoms/Margin/Margin.js");
+var _marginJsDefault = parcelHelpers.interopDefault(_marginJs);
 
-},{"./atoms/Button/Button.js":"jMKHc","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"jMKHc":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$1e80 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+},{"./atoms/Color/Color.js":"jXK5b","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./atoms/Text/Text.js":"a4eGX","./atoms/Margin/Margin.js":"4ghbu"}],"jXK5b":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$a5c1 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$1e80.prelude(module);
+$parcel$ReactRefreshHelpers$a5c1.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "default", ()=>Button);
+parcelHelpers.export(exports, "default", ()=>color);
 var _jsxRuntime = require("react/jsx-runtime");
-const Button = ({ label })=>{
-    return (0, _jsxRuntime.jsx)("button", {
-        className: "dse-button__container",
-        children: label
+var _foundation = require("@ds.e/foundation");
+const color = ({ hexCode, width = (0, _foundation.Spacing).sm, height = (0, _foundation.Spacing).sm })=>{
+    const className = `dse-width-${width} dse-height-${height}`;
+    return (0, _jsxRuntime.jsx)("div", {
+        className: className,
+        style: {
+            backgroundColor: hexCode
+        }
     });
 };
 
-  $parcel$ReactRefreshHelpers$1e80.postlude(module);
+  $parcel$ReactRefreshHelpers$a5c1.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"6AEwr":[function(require,module,exports) {
+},{"react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","@ds.e/foundation":"enIq5"}],"6AEwr":[function(require,module,exports) {
 "use strict";
 module.exports = require("c4c10cbba9862d5f");
 
@@ -25454,6 +25480,99 @@ module.exports = require("c4c10cbba9862d5f");
     exports.jsxs = jsxs;
 })();
 
-},{"593632ccebda0d3a":"21dqq"}]},["gO6AB","gzIQi"], "gzIQi", "parcelRequire9684")
+},{"593632ccebda0d3a":"21dqq"}],"enIq5":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "FontSize", ()=>(0, _fontSizeDefault.default));
+parcelHelpers.export(exports, "Spacing", ()=>(0, _spacingDefault.default));
+var _fontSize = require("./FontSize");
+var _fontSizeDefault = parcelHelpers.interopDefault(_fontSize);
+var _spacing = require("./Spacing");
+var _spacingDefault = parcelHelpers.interopDefault(_spacing);
+
+},{"./FontSize":"8QjSX","./Spacing":"l0H1e","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"8QjSX":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+const fontSizes = {
+    xs: "xs",
+    sm: "sm",
+    base: "base",
+    lg: "lg",
+    xl: "xl"
+};
+exports.default = Object.freeze(fontSizes);
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"l0H1e":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+const spaces = {
+    xxxs: "xxxs",
+    // 4px
+    xxs: "xxs",
+    // 8px
+    xs: "xs",
+    // 12px
+    sm: "sm",
+    // 16px
+    md: "md",
+    // 24px
+    lg: "lg",
+    // 32px
+    xl: "xl",
+    // 48px
+    xxl: "xxl",
+    // 72px
+    xxxl: "xxxl"
+};
+exports.default = Object.freeze(spaces);
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"a4eGX":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$6eda = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$6eda.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "default", ()=>text);
+var _jsxRuntime = require("react/jsx-runtime");
+const text = ({ label })=>{
+    return (0, _jsxRuntime.jsx)("button", {
+        className: "dse-text__container",
+        children: label
+    });
+};
+
+  $parcel$ReactRefreshHelpers$6eda.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"4ghbu":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$c78c = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$c78c.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "default", ()=>margin);
+var _jsxRuntime = require("react/jsx-runtime");
+const margin = ({ space = "xxxl", children })=>{
+    const className = `dse-margin-$(space)`;
+    return (0, _jsxRuntime.jsx)("div", {
+        className: className,
+        children: children
+    });
+};
+
+  $parcel$ReactRefreshHelpers$c78c.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["gO6AB","gzIQi"], "gzIQi", "parcelRequire9684")
 
 //# sourceMappingURL=index.7cee775c.js.map

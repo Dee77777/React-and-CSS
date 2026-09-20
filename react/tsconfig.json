@@ -4,6 +4,7 @@
     "module": "ESNext",
     "moduleResolution": "Node",
     "jsx": "react-jsx",
+    "jsxImportSource": "react",
     "declaration": true,
     "sourceMap": true,
     "strict": true,
