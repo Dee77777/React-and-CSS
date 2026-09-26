@@ -5,8 +5,8 @@ interface MarginProps {
     space?: keyof typeof Spacing
 }
 
-const margin: React.FC<React.PropsWithChildren<MarginProps>> = ({ space = 'xxxl', children }) => {
-    const className = `dse-margin-$(space)`
+const margin: React.FC<React.PropsWithChildren<MarginProps>> = ({ space = 'xl', children }) => {
+    const className = `dse-margin-${space}`
     return <div className={className}>
         {children}
     </div>

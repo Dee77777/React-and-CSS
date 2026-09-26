@@ -1,7 +1,7 @@
 import { jsx } from 'react/jsx-runtime';
 
-const margin = ({ space = 'xxxl', children }) => {
-    const className = `dse-margin-$(space)`;
+const margin = ({ space = 'xl', children }) => {
+    const className = `dse-margin-${space}`;
     return jsx("div", { className: className, children: children });
 };
 

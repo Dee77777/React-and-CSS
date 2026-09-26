@@ -589,36 +589,66 @@ var _react1 = require("@ds.e/react");
 var _utilitiesCss = require("@ds.e/scss/lib/Utilities.css");
 var _marginCss = require("@ds.e/scss/lib/Margin.css");
 var _textCss = require("@ds.e/scss/lib/Text.css");
+var _selectCss = require("@ds.e/scss/lib/Select.css");
+const options = [
+    {
+        label: "Strict Black",
+        value: "Strict Black"
+    },
+    {
+        label: "Strict Blue",
+        value: "Strict Blue"
+    },
+    {
+        label: "Strict Red",
+        value: "Strict Red"
+    },
+    {
+        label: "Strict Yellow",
+        value: "Strict Yellow"
+    }
+];
 (0, _reactDomDefault.default).render(/*#__PURE__*/ (0, _reactDefault.default).createElement("div", {
+    style: {
+        padding: "40px"
+    },
     __source: {
         fileName: "playgrounds/react/src/index.tsx",
-        lineNumber: 11,
+        lineNumber: 27,
         columnNumber: 5
     },
     __self: undefined
-}, /*#__PURE__*/ (0, _reactDefault.default).createElement((0, _react1.Margin), {
+}, /*#__PURE__*/ (0, _reactDefault.default).createElement((0, _react1.Select), {
+    options: options,
+    renderOption: ({ option, getOptionRecommendedProps })=>/*#__PURE__*/ (0, _reactDefault.default).createElement("p", getOptionRecommendedProps({
+            className: "custom"
+        }), option.label),
     __source: {
         fileName: "playgrounds/react/src/index.tsx",
-        lineNumber: 12,
+        lineNumber: 28,
         columnNumber: 9
     },
     __self: undefined
-}, /*#__PURE__*/ (0, _reactDefault.default).createElement((0, _react1.Text), {
-    label: "this is some text",
+}), /*#__PURE__*/ (0, _reactDefault.default).createElement("p", {
     __source: {
         fileName: "playgrounds/react/src/index.tsx",
-        lineNumber: 13,
-        columnNumber: 13
+        lineNumber: 31,
+        columnNumber: 9
     },
     __self: undefined
-}))), document.querySelector("#root"));
+}, "this is some text")), document.querySelector("#root")) //    <div>
+ //        <Margin>
+ //           <Text label='this is some text'/>
+ //        </Margin>
+ //    </div>
+;
 
   $parcel$ReactRefreshHelpers$8952.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react":"21dqq","react-dom":"j6uA9","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","@ds.e/scss/lib/Utilities.css":"hYo6M","@ds.e/scss/lib/Margin.css":"2YJyJ","@ds.e/scss/lib/Text.css":"aQrAH","@ds.e/react":"8EIfV"}],"21dqq":[function(require,module,exports) {
+},{"react":"21dqq","react-dom":"j6uA9","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","@ds.e/scss/lib/Utilities.css":"hYo6M","@ds.e/scss/lib/Margin.css":"2YJyJ","@ds.e/scss/lib/Text.css":"aQrAH","@ds.e/react":"8EIfV","@ds.e/scss/lib/Select.css":"RFZSk"}],"21dqq":[function(require,module,exports) {
 "use strict";
 module.exports = require("a569817e6ea559f6");
 
@@ -24586,14 +24616,17 @@ parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "Color", ()=>(0, _colorJsDefault.default));
 parcelHelpers.export(exports, "Text", ()=>(0, _textJsDefault.default));
 parcelHelpers.export(exports, "Margin", ()=>(0, _marginJsDefault.default));
+parcelHelpers.export(exports, "Select", ()=>(0, _selectJsDefault.default));
 var _colorJs = require("./atoms/Color/Color.js");
 var _colorJsDefault = parcelHelpers.interopDefault(_colorJs);
 var _textJs = require("./atoms/Text/Text.js");
 var _textJsDefault = parcelHelpers.interopDefault(_textJs);
 var _marginJs = require("./atoms/Margin/Margin.js");
 var _marginJsDefault = parcelHelpers.interopDefault(_marginJs);
+var _selectJs = require("./molecules/Select/Select.js");
+var _selectJsDefault = parcelHelpers.interopDefault(_selectJs);
 
-},{"./atoms/Color/Color.js":"jXK5b","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./atoms/Text/Text.js":"a4eGX","./atoms/Margin/Margin.js":"4ghbu"}],"jXK5b":[function(require,module,exports) {
+},{"./atoms/Color/Color.js":"jXK5b","./atoms/Text/Text.js":"a4eGX","./atoms/Margin/Margin.js":"4ghbu","./molecules/Select/Select.js":"9dZMI","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"jXK5b":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$a5c1 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -24620,7 +24653,7 @@ const color = ({ hexCode, width = (0, _foundation.Spacing).sm, height = (0, _fou
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","@ds.e/foundation":"enIq5"}],"6AEwr":[function(require,module,exports) {
+},{"react/jsx-runtime":"6AEwr","@ds.e/foundation":"enIq5","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"6AEwr":[function(require,module,exports) {
 "use strict";
 module.exports = require("c4c10cbba9862d5f");
 
@@ -25537,10 +25570,10 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "default", ()=>text);
 var _jsxRuntime = require("react/jsx-runtime");
-const text = ({ label })=>{
-    return (0, _jsxRuntime.jsx)("button", {
+const text = ({ label, children })=>{
+    return (0, _jsxRuntime.jsx)("p", {
         className: "dse-text__container",
-        children: label
+        children: children
     });
 };
 
@@ -25560,8 +25593,8 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "default", ()=>margin);
 var _jsxRuntime = require("react/jsx-runtime");
-const margin = ({ space = "xxxl", children })=>{
-    const className = `dse-margin-$(space)`;
+const margin = ({ space = "xl", children })=>{
+    const className = `dse-margin-${space}`;
     return (0, _jsxRuntime.jsx)("div", {
         className: className,
         children: children
@@ -25573,6 +25606,133 @@ const margin = ({ space = "xxxl", children })=>{
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["gO6AB","gzIQi"], "gzIQi", "parcelRequire9684")
+},{"react/jsx-runtime":"6AEwr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"9dZMI":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$ad6c = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$ad6c.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "default", ()=>Select);
+var _jsxRuntime = require("react/jsx-runtime");
+var _react = require("react");
+var _textJs = require("../../atoms/Text/Text.js");
+var _textJsDefault = parcelHelpers.interopDefault(_textJs);
+const Select = ({ options = [], label = "Please select an option ...", onOptionSelected: handler, renderOption })=>{
+    var _a;
+    const [isOpen, setIsOpen] = (0, _react.useState)(false);
+    const [selectedIndex, setSelectedIndex] = (0, _react.useState)(null);
+    //let isOpen: boolean = true;
+    const labelRef = (0, _react.useRef)(null);
+    const [overlayTop, setOverlayTop] = (0, _react.useState)(0);
+    const onOptionSelected = (option, optionIndex)=>{
+        setIsOpen(!isOpen);
+        //isOpen = !isOpen;
+        if (handler) handler(option, optionIndex);
+        setSelectedIndex(optionIndex);
+        setIsOpen(false);
+    };
+    const onLabelClick = ()=>{
+        setIsOpen(!isOpen);
+    //isOpen = !isOpen;
+    };
+    (0, _react.useEffect)(()=>{
+        var _a;
+        setOverlayTop((((_a = labelRef.current) === null || _a === void 0 ? void 0 : _a.offsetHeight) || 0) + 10);
+    }, [
+        (_a = labelRef.current) === null || _a === void 0 ? void 0 : _a.offsetHeight
+    ]);
+    let selectedOption = null;
+    if (selectedIndex !== null) selectedOption = options[selectedIndex];
+    return (0, _jsxRuntime.jsxs)("div", {
+        className: "dse-select",
+        children: [
+            (0, _jsxRuntime.jsxs)("button", {
+                ref: labelRef,
+                className: "dse-select__label",
+                onClick: ()=>onLabelClick(),
+                children: [
+                    (0, _jsxRuntime.jsx)((0, _textJsDefault.default), {
+                        children: selectedOption === null ? label : selectedOption.label
+                    }),
+                    (0, _jsxRuntime.jsx)("svg", {
+                        className: `dse-select__caret ${isOpen ? "dse-select__caret--open" : "dse-select__caret--closed"} size-6`,
+                        width: "1rem",
+                        height: "1rem",
+                        xmlns: "http://www.w3.org/2000/svg",
+                        fill: "none",
+                        viewBox: "0 0 24 24",
+                        strokeWidth: 1.5,
+                        stroke: "currentColor",
+                        children: (0, _jsxRuntime.jsx)("path", {
+                            strokeLinecap: "round",
+                            strokeLinejoin: "round",
+                            d: "m19.5 8.25-7.5 7.5-7.5-7.5"
+                        })
+                    })
+                ]
+            }),
+            isOpen ? (0, _jsxRuntime.jsx)("ul", {
+                style: {
+                    top: overlayTop
+                },
+                className: "dse-select__overlay",
+                children: options.map((option, optionIndex)=>{
+                    const isSelected = selectedIndex === optionIndex;
+                    const renderOptionProps = {
+                        option,
+                        isSelected,
+                        getOptionRecommendedProps: (overrideProps = {})=>{
+                            return {
+                                className: `dse-select__option
+                            ${isSelected ? "dse-select__option--selected" : ""}
+                        `,
+                                key: option.value,
+                                onClick: ()=>onOptionSelected(option, optionIndex),
+                                ...overrideProps
+                            };
+                        }
+                    };
+                    if (renderOption) return renderOption(renderOptionProps);
+                    return (0, _jsxRuntime.jsxs)("li", {
+                        className: `dse-select__option
+                    ${isSelected ? "dse-select__option--selected" : ""}
+                `,
+                        onClick: ()=>onOptionSelected(option, optionIndex),
+                        children: [
+                            (0, _jsxRuntime.jsx)((0, _textJsDefault.default), {
+                                children: option.label
+                            }),
+                            isSelected ? (0, _jsxRuntime.jsx)("svg", {
+                                width: "1rem",
+                                height: "1rem",
+                                xmlns: "http://www.w3.org/2000/svg",
+                                fill: "none",
+                                viewBox: "0 0 24 24",
+                                strokeWidth: 1.5,
+                                stroke: "currentColor",
+                                className: "size-6",
+                                children: (0, _jsxRuntime.jsx)("path", {
+                                    strokeLinecap: "round",
+                                    strokeLinejoin: "round",
+                                    d: "m4.5 12.75 6 6 9-13.5"
+                                })
+                            }) : null
+                        ]
+                    }, option.value);
+                })
+            }) : null
+        ]
+    });
+};
+
+  $parcel$ReactRefreshHelpers$ad6c.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-runtime":"6AEwr","react":"21dqq","../../atoms/Text/Text.js":"a4eGX","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"RFZSk":[function() {},{}]},["gO6AB","gzIQi"], "gzIQi", "parcelRequire9684")
 
 //# sourceMappingURL=index.7cee775c.js.map

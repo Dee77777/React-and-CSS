@@ -1,11 +1,11 @@
 import React from 'react'
 
 interface TextProps {
-    label: string
+    label?: string
 }
 
-const text: React.FunctionComponent<TextProps> = ({ label }) => {
-    return <button className='dse-text__container'>{label}</button>
+const text: React.FC<React.PropsWithChildren<TextProps>> = ({ label, children }) => {
+    return <p className='dse-text__container'>{children}</p>
 }
 
 export default text
